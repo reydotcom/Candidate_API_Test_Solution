@@ -1,5 +1,5 @@
-from sqlalchemy import URL, create_engine, text
-from config import settings
+from sqlalchemy import create_engine, text
+from App.config import settings
 
 engine = create_engine(
     url=settings.DATABASE_URL_psycopg(),

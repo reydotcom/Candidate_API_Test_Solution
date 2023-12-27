@@ -20,25 +20,25 @@ def get_time():
     return jsonify(response), 200
 
 
-@app.route('/armenian-cities', methods=['GET', 'POST'])
+@app.route('/armenian-cities', methods=['POST'])
 def get_cities():
     return jsonify(armenian_cities())
 
 
-@app.route('/ararat-info', methods=['GET', 'POST'])
+@app.route('/ararat-info', methods=['POST'])
 def get_ararat_info():
     return jsonify(ararat_info())
 
 
-@app.route('/armenian-dishes', methods=['GET', 'POST'])
+@app.route('/armenian-dishes', methods=['POST'])
 def get_dishes():
     return jsonify(armenian_dishes())
 
 
-@app.route('/random-armenian-word', methods=['GET', 'POST'])
+@app.route('/random-armenian-word', methods=['POST'])
 def get_random_word():
 
-    with open('dictionary.json', 'r', encoding='utf-8') as file:
+    with open('../dictionary.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
         index = random.randint(1, 98)
         value = data.get(str(index))
