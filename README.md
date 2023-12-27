@@ -8,7 +8,7 @@ This API was developed based on a technical assignment provided as a knowledge a
 
 Flask web framework was used as the foundation. PostgreSQL serves as the database, with SQLAlchemy library for database operations.
 
-###How to run this code?
+### How to run this code?
 
     1.Install and start PostgreSQL if you haven't done so previously.
 
