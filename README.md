@@ -10,7 +10,7 @@ Flask web framework was used as the foundation. PostgreSQL serves as the databas
 
 ### How to run this code?
 
-    1.Install and start PostgreSQL if you haven't done so previously.
+    1.Install and start PostgreSQL if you haven't done so already. Then create the database.
 
     2.Navigate to the directory where you want to place the project.
     2.1. Clone/unpack the project from GitHub.
