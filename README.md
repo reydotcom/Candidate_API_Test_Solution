@@ -23,7 +23,7 @@ Flask web framework was used as the foundation. PostgreSQL serves as the databas
     DB_USER=...
     DB_PASS=...
 
-    5.Run the `starter.py` file with the command `python3 starter.py` and wait for it to finish creating the database.
+    5.Run the `starter.py` file with the command `python3 starter.py` and wait for it to finish creating tables in the database.
 
     6.Finally, you need to run the `app.py` file.
     6.1. Start by running the command `export FLASK_APP=app`.
