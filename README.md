@@ -1,6 +1,6 @@
 This API was developed based on a technical assignment provided as a knowledge assessment to join the team. According to the task, the API should contain 5 functions:
 
-    1.Return the time in Yerevan.
+    1.Return the difference with Yerevan time.
     2.Return a list of the top 10 largest cities in Armenia.
     3.Return information about Mount Ararat.
     4.Return a list of 5 famous Armenian dishes.
