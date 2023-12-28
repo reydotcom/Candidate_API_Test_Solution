@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 from datetime import datetime
 import pytz
@@ -7,17 +7,21 @@ import random
 
 from database import armenian_dishes, armenian_cities, ararat_info
 
+
 app = Flask(__name__)
 
 
 @app.route('/time', methods=['GET'])
 def get_time():
-    response = {
-        "location": "Yerevan",
-        "current_time": datetime.now(pytz.timezone('Europe/Yerevan')).strftime("%Y-%m-%d %H:%M:%S")
-    }
+    user_time = request.args.get('user_time')
+    user_time = datetime.strptime(user_time, '%Y-%m-%d %H:%M:%S')
 
-    return jsonify(response), 200
+    armenian_time = datetime.now(pytz.timezone('Asia/Yerevan')).strftime('%Y-%m-%d %H:%M:%S')
+    armenia_time = datetime.strptime(armenian_time, '%Y-%m-%d %H:%M:%S')
+
+    if user_time > armenia_time:
+        return jsonify({"difference": str(user_time - armenia_time)})
+    return jsonify({"difference": f'-{armenia_time - user_time}'})
 
 
 @app.route('/armenian-cities', methods=['POST'])
